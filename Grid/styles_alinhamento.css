@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --background-color: #7159c1;
+    --border: 1px solid red;
+}
+
+.container {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    /*Altura e largura visivel do documento.*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+    /*
+    Sabendo que o grid e bidimensional, nos temoso eixo x e y
+
+    O **eixo x** e o posicionamento horizontal, da esquerda para a direita.
+
+    O **eixo y** e o posicionamneto vertical, de cima para baixo.
+    */
+
+    --justify-content: space-between;
+    /*o space-evenly e o mesmo espaco para cada coluna*/
+    --align-content: space-between;
+
+    /*
+    ###content, items e self###
+
+    Juntando o 'justify', ou 'align' , com estes elementos: 'content', 'items' e 'self'; nos
+    observamos nossas propriedades
+    */
+
+    /*
+    ###content###
+
+    'justify-content' e 'align-content' nos permite alinha o proprio grid, relativo ao espaco de fora do grid.
+
+    Essas propriedades sao raras, pois so e aplicado caso o grid seja, menor que a area definida.
+    (Por exemplo, quando usamos em px o tamanho do grid, poderemos, terminar com um grid pequeno,
+    para o tamanha da area do grid )
+    */
+
+    /*
+    ###items###
+
+    'justify-content' e 'align-content' vai permitir alinhar os items do nosso grid, em qualquer espaco
+    disponivel, na celula que ele habilitar.
+
+    Podemos uar 4 valores
+
+    1. start
+    2. end
+    3. center
+    4. stretch
+    */
+
+    justify-items: center;
+    align-items: flex-end;
+}
+
+.container div {
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    /*Aqui nos definimos que cada celula(div) vai vai apenas ocupar um espaco de 50% do real tamanho 
+    de cada celula*/
+}
+
+.self {
+    /*
+    ###self
+
+    'justify-self' e 'align-self' vai nos permitir alinhas o item em si.
+
+    faz a mesma coisa que o 'justify-items' e 'align-items', porem, aplicado diretamente no item de um grid.
+    */
+
+    justify-self: center;
+    align-self: center;
+}

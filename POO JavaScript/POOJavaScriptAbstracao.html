@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript</title>
+</head>
+<body>
+    <script>
+        //A principal funcao da Programacao orientada a Objetos e abstrair objetos do mundo real para o desenvolvimento de software, a reutilizacao de codigo e a padronizacao de projetos.
+        class ReceitaBolo
+        { //Primeiro passo nos devemos abstrair a entidade (classe), neste caso eu abstrair uma receita.
+            constructor (sabor, ingredientes){
+                //Aqui tambem estou passando dois parametros para que eu possa criar um programa mais dinamico no momento da criacao/instanciacao do meu objeto referente a esta classe.
+
+                // Obrigatoriamente eu sou obrigado a criar o metodo(funcao) construtor para
+                //armazenar as minhas entidades
+                this.sabor = sabor
+                // Usando o this eu estou falando que esta variavel 'sabor' e referente a classe ReceitaBolo. Exemplo: ReceitaBolo.sabor.
+                // Se eu nao passar o .this isso deixa de ser uma atributo da classe ReceitaBolo e passa a ser uma variavel igual ao valor de atribuicao "sabor".
+                this.ingredientes = ingredientes
+                //this.sabor e da classe E apenas sabor e do constructor
+            }
+            // Um metodo e como se fosse uma funcao, porem quando ela esta dentro da classe nos chamamos ela de metodo. Um metodo e uma acao que ele vai executar.
+            fazer() {
+                console.log('Fazendo o bolo...')
+            }
+        }
+
+        let boloMorango = new ReceitaBolo("Morango", 5)
+        // Aqui eu estou criando/instanciando um novo objeto referente a classe ReceitaBolo()
+        let boloChocolate = new ReceitaBolo("Chocolate", 10)
+        
+        //Eu posso acessar um atributo apenas passando um ponto. Exemplo: boloMorango.sabor
+
+        boloMorango.fazer()
+        //Aqui eu estou executando um metodo do objeto boloMorango que foi instanciado referenciando a classe ReceitaBolo
+    </script>
+</body>
+</html>

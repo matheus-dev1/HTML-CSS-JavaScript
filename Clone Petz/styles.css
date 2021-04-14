@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+    background-color: #FBCF3B;
+    width: 100%;
+    padding: 12px;
+}
+
+.banner img {
+    margin: 15px;
+}
+
+.banner input {
+    width: 400px;
+    height: 50px;
+    padding: 0 16px;
+    margin: 0 0 0 220px;
+    border-radius: 6px; /* Arredondamento das bordas */
+    border: 0;
+}
+
+.banner button {
+    width: 100px;
+    height: 50px;
+    border-radius: 6px; /* Arredondamento das bordas */
+    border: 0;
+    background-color: #136CB3;
+    color: white;
+}
+
+.section2 {
+    background-color: #136CB3;
+    text-align: center;
+    padding: 25px;
+    height: 20px;
+}
+
+.section2 a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    padding: 0px 5px;
+}
+
+.banner_down {
+    background-image: url(./img/banner.webp);
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

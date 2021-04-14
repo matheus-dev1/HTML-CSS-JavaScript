@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript Exercicio</title>
+</head>
+<body>
+    <script>
+        // Criar uma classe com base em uma entidade da sua casa, exemplo um quadro, criar atributos e métodos dessa entidade. Exibir os atributos.
+        class Interruptor
+        {
+            constructor (luz, cor, ventilador, velVentilador){
+                this.luz = luz
+                //Luz ligada ou desligada
+                this.cor = cor
+                //Cor da luz
+                this.ventilador = ventilador
+                //Ventilador ligado ou desligado
+                this.velVentilador = velVentilador
+                //Velocidade do ventilador
+            }
+
+            ligarLuz(){
+                console.log("Ligando luz...")
+            }
+
+            ligarVentilador(){
+                console.log("Ligando o ventilador...")
+            }
+
+        }
+        let ligarLuz = new Interruptor(true, "Branca", false, 0)
+        console.log(ligarLuz)
+        ligarLuz.ligarLuz()
+        console.log(ligarLuz)
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta lang="pt-br">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" text="text/css" href="styles.css">
+    <title>Progress Bar JavaScript</title>
+</head>
+<html>
+    <style>
+        #myProgress {
+        width: 100%;
+        height: 30px;
+        position: relative;
+        background-color: #ddd;
+        }
+
+        #myBar {
+        background-color: greenyellow;
+        /* Este width de 10px e uma pequena porcentagem do nossa barra de progresso. Entao se por exemplo eu tira-la ela inicia com nada, aqui ela "inicia" com 1% */
+        /* width: 10px; */
+        height: 30px;
+        position: absolute;
+        }
+    </style>
+<body>
+
+    <!-- Titulo da Pagina -->
+<h1>JavaScript Progress Bar</h1>
+
+<!-- A div myProgress define uma espaco em cinza para colocar a barra de progresso de 100% da tela atual e para "fingir que nao possui nada carregado, mas que possui ate um determinado ponto." -->
+<div id="myProgress">
+    <!-- Div onde eu vou colocar o FRAME de "carregamento" ao clicar no botao. -->
+  <div id="myBar"></div>
+</div>
+<div id="Percent"></div>
+
+<br>
+
+<!-- Botao que ao clicar executa a funcao Move() -->
+<button onclick="move()">Click Me</button> 
+
+<script>
+    function move() {
+        // Aqui eu vou pegar o elemento da barra de progresso.
+        var ProgressBarElement = document.getElementById("myBar");
+        // Aqui eu vou pegar o elemento da parcentagem da barra de progresso.
+        var PercentElement = document.getElementById("Percent")
+        // DEFINO uma largura de ZERO!
+        var width = 0;
+        // Na funcao setInternal eu preciso usar dois argumentos.
+        // O primeiro e a funcao em que eu vou executar a cada tempo do segundo argumento.
+        // Entao se por exemplo eu colocar 1000 no valor do segundo argumento, a cada segundo
+        // eu vou executar esta funcao ate alcancar o clearInterval, que finaliza o setInterval.
+        var setIntervalID = setInterval(frame, 100);
+
+        function frame() {
+            if (width == 100) {
+                // Se a largura da barra de progresso chegar a 100 porcento ou o valor em que eu quiser difinir ela para.
+                clearInterval(setIntervalID);
+            } else {
+                // Adiciona mais 1 por cento na barra de progresso.
+                width++;
+                // Aqui eu adiciona pequenos quadradinhos verdes ate chegar a largura definida que no nosso caso eh 100.
+            ProgressBarElement.style.width = width + '%';
+            // Aqui eu coloco o valor da porcentagem no momento.
+            PercentElement.innerHTML = width + "%";
+            }
+        }
+    }
+</script>
+</body>
+</html>

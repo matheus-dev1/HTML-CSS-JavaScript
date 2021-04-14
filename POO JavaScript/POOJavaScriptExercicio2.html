@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript Exercicio</title>
+</head>
+<body>
+    <script>
+        class Quadro
+        {
+            constructor (imagem, suporte) {
+                this.imagem = imagem
+                this.suporte = suporte
+            }
+            exibirImagem(){
+                console.log(this.imagem)
+                console.log(this.suporte)
+            }
+        }
+        let quadro1 = new Quadro("Foto em Familia", "Prego")
+        quadro1.exibirImagem()
+    </script>
+</body>
+</html>

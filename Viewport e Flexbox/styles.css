@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    background-color: deepskyblue;
+    height: 50vh;
+
+    flex-direction: row; /*-- Este valor e padrao e deixa os items em todos em apenas uma linha.*/
+
+    /*flex-direction: column; -- Este valor nao e padrao. O valor column deixa os itens filhos de container 
+    ficarem ocupando apenas uma coluna.
+    
+    flex-direction: row-reverse -- vai ficar em forma de linha porem da esquerda para a direitra.
+    flex-direction: column-reverse -- funciona da mesma forma que o row-reverse porem com as colunas;*/
+
+    /*Obs: Quando eu trabalho com flex-direction: column o meu justify-content fica na vertical e o meu align-items
+    fica na hotizontal*/
+
+    /*Quando a propriedade flex-direction possuir o valor row então podemos realizar o alinhamento horizontal
+    através da propriedade justify-content. O padrão é flex start e podemos variar com flex-end e center.*/
+
+    /*Horizontal com o row*/ /*VErtical com o Column*/
+    /*justify-content: flex-start; -- Este valor flex-start e padrao, ele faz com que o os itens do nosso container
+    comecem pela esquerda e conforme eu vou adicionando mais ele vai indo mais para a direita*/
+
+    /*justify-content: flex-end; -- Neste valor flex-end ele nao e padrao, e vai fazer com que os itens comecem
+    pela direita sendo que se eu aumentar a quantidade de itens ele vai indo mais a esquerda.*/
+
+    justify-content: flex-end; /* -- Com o elemento center assim todos os itens do meu container ficarao no centro
+    e se ajustarao caso eu va adicionando mais itens.*/
+
+    /*Vertical com o row*/ /*Horizontal com o Column*/
+    /*align-items: flex-start;  -- O padrao dele e flex-start*/
+
+    /*align-items: center; O align-items faz um alinhamento dependendo do valor na parte vertical do(s) item(s).*/
+    /*Neste caso eu estou centralizando os itens dentro de .container na vertical.*/
+
+    align-items: flex-start; /* -- O align-tens: flex-end coloca os nosso items na parte inferior(de baixo)
+    do nosso container.*/
+
+    --flex-wrap: wrap-reverse; /*no-wrap, wrap wrap-reverse*/
+}
+
+.flex-item {
+    background-color: wheat;
+    border: 1px solid red;
+    margin: 20px;
+    height: 5%;
+    width: 60px;
+    flex-basis: 25px; /*Pre-definindo um tamanho base para cada item*/
+    flex-shrink: 1; /*Encolhe a nossa div*/
+}
+
+.flex-item:nth-child(1){
+    flex-grow: 1; /*Ocupa todo os espaco da div ate preencher toda linha ou coluna*/
+    order: 4;
+    /*Com esta propriedade eu posso alterar o local dos meus elementos sem mecher no html.*/
+}
+.flex-item:nth-child(2){
+    order: 3;
+}
+.flex-item:nth-child(3){
+    order: 2;
+}
+.flex-item:nth-child(4){
+    order: 1;
+}

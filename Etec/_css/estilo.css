@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29/09/2016, 21:57:36
+    Author     : Afonso
+*/
+
+body{
+    background-image: url(fundo.png);
+    font-family: Arial, Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+#conteiner{
+    opacity: 0.88;
+    margin: 1em auto;
+    width: 1280px;
+    height: auto;
+    background: #fff;
+}
+
+#cabecalho{
+    background: #fff;
+    margin-left: 10px;
+}
+
+#navegacao{
+    background: rgba(198,30,30,1);
+    padding: 2px 0;
+    margin-bottom: 22px;
+}
+#navegacao ul{
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+    border-left: 1px solid #fff;
+}
+#navegacao li{
+    display: inline;
+    padding: 0 10px;
+    border-right: 1px solid #fff;
+}
+
+#navegacao li a{
+    text-decoration: none;
+    /*color: #272900;*/
+    color: #fff;
+}
+
+#menu{
+    
+    float: right;
+    width: 210px;
+    background: #dac;
+    margin-right: 20px;
+}
+#menu a{
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+#menu h3{
+    margin-left: 20px;
+}
+
+#exibicao{
+    float: left;
+    width: 1000px;
+    background: #bbb;
+    margin: 0 0 0 20px;
+    position: relative;
+}
+#mostrando{
+    margin-top: 15px;
+    margin-left: 35px; 
+    margin-right: 35px;
+    margin-bottom: 15px;
+    height: auto;
+}
+#mostrando p{
+    text-align: justify;
+}
+/* Trabalhando imagens da pagina "Curso de Informática" */
+.image_site {
+    width: 190px;
+    height: 100px;
+    transition: all 0.7s ease;
+}
+.image_site:hover{
+    transform: translate(0px, -100px);
+    width: 800px;
+    height: 400px;
+}
+.image_python{
+    width: 190px;
+    height: 100px;
+    transition: all 0.7s ease;
+}
+.image_python:hover{
+    transform: translate(0px, -240px);
+    width: 760px;
+    height: 400px;
+}
+
+/* Mexendo nas imagens tá pagina imagens */
+
+#rodape{
+    clear: both;
+    background: #FF9;
+}

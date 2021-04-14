@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title>
+</head>
+<body>
+    <h3><strong>Informações Gerais</strong></h3>
+    <img src="contato.png" alt="Entre em contado conosco" width="250" height="60">
+    <p>Pagina destinada a contato conosco para relacionamento entre empresa e canditado.</p>
+    <p>Preencha os campos a baixo e entraremos em contato! Boa sorte!</p>
+    <h4 style="color: blue;">Formulário de Escolha</h4>
+    <form action="">
+        <label for="name">Nome: </label>
+        <!--O atributo for serve apenas para fazer um sentido de pertencimento, ou seja, o for pertence a name-->
+        <input type="text" name="name" id="name" style="border-radius: 25px;"><br><br>
+        <label for="idade">Idade: </label>
+        <input type="number" name="idade" id="idade" style="border-radius: 25px;"><br>
+        <h4 style="color:greenyellow;">Sexo</h4>
+        <input type="radio" name="genero" id="masculino" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" name="genero" id="feminino" value="feminino">
+        <label for="feminino">Feminino</label><br>
+        <input type="radio" name="genero" id="outros" value="outros" checked>
+        <label for="outros">Outros</label>
+        <!--Name se mantem o mesmo por esta todos os "radios" se tratarem de generos-->
+    </form>
+</body>
+</html>

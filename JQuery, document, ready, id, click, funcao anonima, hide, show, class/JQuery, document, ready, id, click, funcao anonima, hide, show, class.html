@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Exercicio</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous">
+    </script>
+    <!--Podemos fazer o download do JQuery ou apenas passar o link CDN-->
+    <!--
+        Criar um programa para criar um titulo e um paragrafo e mais um botão para apagar as informações da
+        classe e outro botão para fazer as informações aparecerem.
+    -->
+    <script>
+        $(document).ready(function(){
+            $("#ocultar").click(function(){
+                $('.tags').hide()
+            });
+            $("#mostrar").click(function(){
+                $('.tags').show()
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 class="tags">Titulo 1</h1>
+    <p class="tags">Paragrafo 1</p>
+    <button id="ocultar">Ocultar</button>
+    <button id="mostrar">Mostrar</button>
+</body>
+</html>

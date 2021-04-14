@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript Objeto Literal / Estatico</title>
+</head>
+<body>
+    <script>
+        let nome = "Rex"
+        let tamanho = 90
+
+        let cachorro = {
+            // Como isto e um objeto Literal eu nao preciso de uma classe nem instanciar ele.
+
+            //A ideia de uma classe e ser um codigo onde eu consigo usar em diversas situacoes e pra instanciar varias vezes, diferente do objeto literal que voce so quer ele uma vez de uma maneira.
+            nome: nome,
+            tamanho: tamanho,
+
+            dormir: function () {
+                console.log("Dormiu")
+            }
+        }
+
+        console.log(cachorro.nome)
+        cachorro.nome = "Rexxar"
+        console.log(cachorro.nome)
+        console.log(cachorro.tamanho)
+        cachorro.dormir()
+
+    </script>
+</body>
+</html>

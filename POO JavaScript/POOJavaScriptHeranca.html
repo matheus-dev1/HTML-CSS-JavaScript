@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript Heranca</title>
+</head>
+<body>
+    <script>
+        class Animal
+        {
+            constructor (cor, peso){
+                this.cor = cor
+                this.peso = peso
+            }
+
+            dormir(){
+                console.log("Dormiu...")
+            }
+        }
+
+        class Cachorro extends Animal
+        // A classe cachorro vai herdar TUDO o que tiver na classe animal, ou seja, eu nao preciso definir cor, peso e uma funcao dormir para o cachorro mesmo que ele tambem faca isso, por que eu HERDEI isso da classe animal.
+        {
+            constructor(tamanho){
+                super()
+                // O metodo super() faz uma "Conexao" entre a classe Cachorro e Animal.
+                this.tamanho = tamanho
+            }
+
+            rosnar(){
+                console.log("Rosnou...")
+            }
+        }
+        let BulldogFrances = new Cachorro("Branco com pintas pretas", 22)
+        console.log(BulldogFrances)
+        BulldogFrances.dormir()
+        BulldogFrances.rosnar()
+    </script>
+</body>
+</html>

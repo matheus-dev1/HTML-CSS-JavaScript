@@ -1,0 +1,70 @@
+div {
+    height: 5000px;
+    width: 5000px;
+}
+
+h1 {
+
+    animation-name: expandirLetras;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes expandirLetras {
+    0% {
+        letter-spacing: 0px;
+        
+    }
+
+    /* Em 50% eu termino de expandir a minha animacao! */
+    50% {
+        letter-spacing: 42px;
+    }
+
+    /* Depois de 50% ele vai voltando para o letter-spacing == 0px */
+    100% {
+        letter-spacing: 0px;
+    }
+}
+
+/* Pseudo elementos */
+/* ::-webkit-scrollbar              { 1 } - Este pseudo elemento ira alterar tudo referente a LARGURA BARRA INTERNA EM SI! */
+/* ::-webkit-scrollbar-button       { 2 } - Este pseudo elemento ira alterar tudo referente ao BOTAO DA BARRA*/
+/* ::-webkit-scrollbar-track        { 3 } - Este pseudo elemento ira alterar tudo referente a como se fosse uma SEGUNDA CAMADA DO SCROLL BAR! */
+/* ::-webkit-scrollbar-track-piece  { 4 } - Este pseudo elemento ira alterar tudo referente a como se fosse uma SEGUNDA CAMADA DO SCROLL BAR! */
+/* ::-webkit-scrollbar-thumb        { 5 } - Este psedudo elemento e a BARRA EXTERNA*/
+/* ::-webkit-scrollbar-corner       { 6 } - E uma pontinha que fica separando duas barras*/
+/* ::-webkit-resizer                { 7 } - Eh o redimencionador*/
+
+::-webkit-scrollbar {
+    background-color: blue;
+    width: 24px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: red;
+}
+
+::-webkit-scrollbar-track  {
+    background: gray;
+    opacity: 10%;
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-track-piece  {
+    background: gray;
+    -webkit-border-radius: 6px;
+    opacity: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+    background: pink;
+}
+
+::-webkit-scrollbar-corner       {
+    background-color: darkturquoise;
+}
+
+::-webkit-resizer {
+    background-color: darkkhaki;
+}

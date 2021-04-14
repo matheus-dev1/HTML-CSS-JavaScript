@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Exercicio</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous">
+    </script>
+    <!--Podemos fazer o download do JQuery ou apenas passar o link CDN-->
+    <!--
+        Criar um programa onde haja a criação de dois títulos e dois parágrafos. Na sequencia deverá ter um botão
+        para apagar um título e um parágrafo e outro botão para que os parágrafos que foram apagados possam
+        ser visualizados novamente.
+    -->
+    <script>
+        $(document).ready(function(){
+            $("#ocultar").click(function(){
+                $("#ocultarTitle2, #ocultarParag2").hide()
+            })
+            $('#mostrar').click(function(){
+                $("#ocultarTitle2, #ocultarParag2").show()
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Titulo 1</h1>
+    <h2 id="ocultarTitle2">Titulo 2</h2>
+    <p>Paragrafo 1</p>
+    <p id="ocultarParag2">Paragrafo 2</p>
+    <button id="ocultar">Ocultar H2 e P2</button>
+    <button id="mostrar">Mostrar H2 e P2</button>
+</body>
+</html>

@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --background-color: #7159c1;
+}
+
+.container {
+    display: grid;
+    /*Grid como se dividise o conteudo em linhas e colunas.*/
+    
+    /*
+    Grid possui duas dimensoes.
+    Flebox possui uma dimensao.
+    Um complementa otrabalho do outro
+    */
+
+    grid-template-columns: 3fr 1fr;
+    /*O proriedade grid-template-columns cria as colunas da minha tela.
+    Neste exemplo eu estou criando duas colunas e a primeira coluna pega 3/4 da tela.*/
+    /*Obs: Este tipo de media fr e uma medida flexivel ou seja ele se adapta ao tamanho da tela*/
+
+    grid-template-rows: 20vh 70vh 10vh;
+    /*A propriedade grid-template-rows: deifini primeiramente que vou ter 3 linhas e depois eu coloquei que
+    a primeira linha tem uma view height de 20 %, a segunda linha 70% e a terceira linha 10%*/
+
+    /*grid-row-gap: 20px;*/
+    /*Espacamento entre as linhas*/
+
+    /*grid-column-gap: 50px;*/
+    /*Espacamento entre as columns*/
+
+    /*grid-gap: 20px 50px;*/
+    /*Espacamento tanto entre linha como coluna*/
+    
+    grid-template-areas: 
+    "header header" 
+    "main aside" 
+    "footer footer";
+    /*Aqui nos definimos da mesma maneira o que cada linha ira ocupar, entao por exemplo nesta header
+    eu estou ocupando uma linha e duas colunas*/
+    /*Caso eu queria deixa uma coluna vazia apenas deixas um ponto "."*/
+}
+
+header {
+    background-color: yellow;
+    /*
+    --height: 100px;
+    --width: 100%;
+    */
+    /*Sempre coloque cores, altura e largura quando estiver definindo o seu grid ou o design BASE da pagina.*/
+
+    /*Aqui eu quero fazer com que o meu header ocupe a primeira linha inteira*/
+    /*
+    --grid-column-start: 1;
+    --grid-column-end: 3;
+    */
+    /*Como a nossa linha tinha 3 colunas 1 virtual e as outras as que nos criamos entao precisamos pegar
+    da coluna virtual ate a coluna final da linha que neste caso e 3.*/
+    /*Obs: Eu tenho uma linha virtual na coluna entao temos que comecar por ela.*/
+
+    /*
+    --grid-row-start: 3;
+    --grid-row-end: 4;
+    */
+    /*Entao aqui vamos colocar o nosso header na posicao linha 3 ate a linha 4.*/
+    /*Obs: Tambem temos uma linha virtual que comeca em 1.*/
+
+    /*
+    --grid-column: 1/3;
+    --grid-row: 3/4;
+    */
+    /*Faz a mesma coisa que o grid-column-start/end e grid-row-start/end*/
+
+
+    grid-area: header;
+    /*Aqui nos definimos qual linha este elemento vai ocupar, neste caso vai ocupar a linha header*/
+}
+
+main {
+    background-color: blue;
+    /*
+    --height: 100px;
+    --width: 100%;
+    */
+
+    /*
+    --grid-column-start: 1;
+    --grid-column-end: 2;
+    */
+    /*Toda linha virtual de cada coluna comeca por 1.*/
+
+    grid-area: main;
+}
+
+aside {
+    background-color: green;
+    /*
+    --height: 100px;
+    --width: 100%;
+    */
+
+    /*
+    --grid-column-start: 2;
+    --grid-column-end: 3;
+    */
+
+    grid-area: aside;
+}
+
+footer {
+    background-color: red;
+    /*
+    --height: 100px;
+    --width: 100%;
+    */
+
+    /*
+    --grid-column-start: 1;
+    --grid-column-end: 3;
+    */
+
+    grid-area: footer;
+}

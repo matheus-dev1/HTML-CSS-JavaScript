@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta lang="pt-br"/>
+        <meta charset="UTF-8"/>
+        <title>Media Alunos</title>
+    </head>
+
+    <body>
+        <script>
+            let notasTotal = 0;
+            let qtdAlunos = +prompt('Digite a quantidade de alunos: ');
+            for (let indice = 0; indice < qtdAlunos; indice++){
+                let nota = +prompt(`Digite a nota ${indice + 1}`);
+                notasTotal = parseFloat(notasTotal) + Number(nota);
+            }
+            let media = (Number(notasTotal) / Number(qtdAlunos))
+            document.write("A media de ", qtdAlunos, " alunos e igual a ", media)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript Objeto Literal / Estatico + Desestruturacao + Array + Map + Callback</title>
+</head>
+<body>
+    <!-- Criar um formulário (HTML), uma função que recebe os dados (nome, idade, profissão) de um usuário e transforma esses dados em um objeto literal dinamicamente. Exibir os atributos do objeto. -->
+    <label for="nome">Nome: </label>
+    <input type="text" id=nome value="">
+
+    <label for="idade">Idade: </label>
+    <input type="number" id=idade value="">
+
+    <label for="profissao">Profissao: </label>
+    <input type="text" id=profissao value="">
+    <button onclick="enviar()">Enviar</button>
+        <!-- Eu tenho que criar um onclick porque assim eu consigo enviar os dados apenas quando eu quero e no caso quando eu clicar -->
+    
+    <script>
+        function enviar() {
+            let nomeUser = document.getElementById('nome').value
+            let idadeUser = document.getElementById('idade').value
+            let profissaoUser = document.getElementById('profissao').value
+
+            let Pessoa = {
+                nome: nomeUser,
+                idade: idadeUser,
+                profissao: profissaoUser,
+                exibirDados: function () {
+                    document.write("O(a) " + nomeUser + " possui " + idadeUser + " anos e tabalha como " + profissaoUser)
+                }
+            }
+            Pessoa.exibirDados()
+
+            //DESESTRUTURACAO
+            const {nome, idade, profissao} = Pessoa
+            //Obs: Os nomes tem que ser os mesmo. Da variavel e da "Desestruturacao".
+
+            console.log(nome)
+            console.log(idade)
+            console.log(profissao)
+
+            //Pode fazer tanto com "Dicionario" como com Array.
+
+            //DESESTRUTURACAO COM ARRAY
+            const Frutas = [
+                "banana",
+                "maca",
+                "pera"
+            ]
+
+            const [bananaFruit, macaFruit, peraFruit] = Frutas
+            //Diferente do dicionario eu posso dar outros nomes.
+
+            console.log(bananaFruit)
+            console.log(macaFruit)
+            console.log(peraFruit)
+
+            /*
+            const Pessoa = {
+	            nome: "Matheus",
+                idade: 24,
+                profissao: "programador"
+            }
+
+            const {nome, idade, profissao} = Pessoa
+
+            document.write(nome + "<br>")
+            document.write(idade + "<br>")
+            document.write(profissao + "<br>")
+            */
+
+            //FUNCAO MAP.
+
+            /*
+            
+            */
+
+            Frutas.map(function Elements (elements){
+                //Uma funcao de callback e uma simples funcao, porem ela vai ser passada como parametro para outra funcao ou metodo e esta funcao de callback sendo usada no metodo "map()" recebe cada elemento do array.
+                console.log(elements)
+                }
+            )
+        }
+    </script>
+</body>
+</html>

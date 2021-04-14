@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <!-- TUDO EH OBJETO -->
+</head>
+<body>
+    <input id="inputKey" placeholder="Digite o seu nome: "></input>
+    <input id="inputValue" placeholder="Digite o seu nome: "></input>
+    <button class="btnSetItem"><b>Set Item</b></button>
+    <hr />
+    <input id="getInputValue" placeholder="Digite a Chave que deseja receber: "></input>
+    <button class="btnGetItem">Get Item</button>
+    <p id="getItemLocation"></p>
+    <hr />
+    <input id="removeInputValue" placeholder="Digite a Chave que deseja apagar: "></input>
+    <button class="btnRemoveItem">Remove Item</button>
+
+    <script>
+        let btnSetItem = document.querySelector(".btnSetItem")
+        let btnGetItem = document.querySelector(".btnGetItem")
+        let btnRemoveItem = document.querySelector(".btnRemoveItem")
+
+        function setLocalStorage() {
+            // addEventListener é a maneira de registrar uma espera de evento, ou seja, eu estou esperando o elemento/evento acontecer que no caso e o click do botao acontecer e quanto acontecer ele faz algo.
+            btnSetItem.addEventListener('click', (event) => {
+                // OBS: Com getElementByClassName nem QuerySelector funcionaram, apensa com getElementById
+                let inputKey = document.getElementById("inputKey").value
+                let inputValue = document.getElementById('inputValue').value
+                // As chaves sao unicas.
+                localStorage.setItem(inputKey, inputValue)
+                // Nao carrega a pagina
+                event.preventDefault();
+
+                //Obs: Um exemplo de uso de localStorage e o ultmos produso visualizados em uma loja digital, ele armazena os ultimos produtos visualziado em localStorage, porque ele e muito volatil.
+
+                // Obs: localStorage mantém o dado gravado mesmo se o browser é fechado e reaberto.
+            });
+        }
+        
+        function getLocalStorage() {
+            btnGetItem.addEventListener('click', (event) => {
+                let getInputValue = document.getElementById('getInputValue').value
+                let getItemLocation = document.getElementById("getItemLocation")
+                let valueItem = localStorage.getItem(getInputValue)
+                getItemLocation.innerText = String(valueItem)
+                event.preventDefault()
+            });
+        }
+
+        function removeLocalStorage() {
+            btnRemoveItem.addEventListener('click', (event) => {
+                let removeInputValue = document.getElementById("removeInputValue").value
+                localStorage.removeItem(removeInputValue)
+                event.preventDefault();
+            });
+        }
+        
+        // Estas funcoes ficam aqui porque ela posusi um EvenListener e sao chamadas quando oos botoes sao clicados.
+        setLocalStorage();
+        getLocalStorage();
+        removeLocalStorage();
+    </script>
+</body>
+</html>

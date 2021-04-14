@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--<!DOCTYPE html> e uma declarao que permite o navegador identificar qual o tipo de html estamos usando, no nosso caso o HTML 5.
+todo arquivo html necessita desta declaracao. -->
+<!--Isto e um comentario!-->
+<html>
+    <!--"TAG" - <html> é a tag de abertura que dá o pontapé inicial e diz ao navegador que tudo entre isso e a tag de
+    fechamento </html> é um documento HTML.-->
+    <head>
+        <meta charset="UTF-8">
+        <meta lang="pt-br">
+        <!--
+        Unicode UTF-8
+        O UTF-8 contém todos os caracteres dos padrões Unicode e ASCII, sendo, portanto, o mais utilizado em páginas web.
+        A mesma tag meta, porém com outros atributos, pode ser utilizada para outros fins, como na SEO (Search Engine Optimization)
+        -->
+        <!--
+        O elemento head comeca antes do body.
+        As informacoes do elemento head nao aparecen na janela do navegador.
+        Um dos elementos mais importante no elemento head, e o title.
+        -->
+        <title>Guide Beginner HTML!©</title>
+        <!--O elemento title serve para exibir um tipo no topo do seu arquivo html.-->
+    </head>
+    <!--"TAGS DE FECHAMENTO" - As tag que fechamento (Exemplo: </head>) significam que os elementos desta tag so vao ate este
+    determinado local da pagina.-->
+    <!--Porem nem todas as tags precisam de um fechamendo, apenas as que possui conteudo dentro delas, por exemplo a tag <br>
+    nao possui fechamento, ate por que ele fica isolada no codigo.-->
+    <!--Existem tambem tags de auto fechamento, como o propripo <br> porem na versao do Xhtml, porem caso voce queira usar
+    pode usar-lo com autofechamento por exmeplo: <br /> -->
+    <body style="background-color:violet;">
+        <!--O elemento Body contem as informacoes na pagina.-->
+        <!--O material entre <body> e </body> é o conteúdo principal do documento que aparecerá na janela do navegador.-->
+        <!--"ATRIBUTOS" - Os atributos aparecem dentro da tag de abertura e seus valores ficam entre aspas.
+        Eles se parecem com <tag attribute = "value"> Margarina </tag>.
+        Obs: As aspas nem sempre são essenciais, mas é uma convenção de boas práticas -->
+        <h2 id="topo do Arquivo HTML"> Top</h2>
+        <!--Criamos uma id para podemos usar o href para voltar para esta parte da pagina web.-->
+        <P>Hello World!</P>
+        <p>Dog HTML!</p>
+        <P><big>Grande</big></P>
+        <!-- A tag <big> deixa o texto grande-->
+        <p><small>Pequeno</small></p>
+        <!-- A tag <small> deixa o texto pequeno-->
+        <P><u>Sublinhado</u></P>
+        <!--A tag <u> deixa o texto sublinhado-->
+        <p><sub>Subscrita</sub></p>
+        <!-- A tag <sub> deixa o texto pequeno e subscrito (um pouco para baixo)-->
+        <p><sup>Sobrescrita</sup></p>
+        <!--A tag <sup> deixa o texto pequeno e sobrescrito (um pouco para cima)-->
+        <p><del>Riscado</del></p>
+        <!--A tag <del> deixa o texto riscado, trazendo a ideia de texto apagado/deletado-->
+        <!--A tag <p> significa "Paragrafo"-->
+        <br>
+        <!--O elemento br nao posusi elementos dentro dele e ele basicamente pula uma linha.-->
+        <!--Obrigatoriamente caso nos precisamos pular um linha em html usamos os elementos <p> entre os nosso textos.-->
+        <!--O HTML agora as conhece como paragrafos separados.-->
+        <p>Prestem atenção <em>é possivel </em>que nossa organização esteja sendo <strong>ROUBADA!</strong></p>
+        <!--
+            b e strong para negrito/texto forte;
+            i e em para itálico/ênfase;
+            sup e sub para sobrescrito e subscrito, respectivamente;
+            ins e del para indicar trechos que foram incluídos ou removidos, respectivamente;
+            small para textos menores que o padrão;
+            mark para texto destacado.
+        -->
+        <!--O elemento <em> deixa o texto dentro dele como italico.-->
+        <!--O elemento <strong> deixa o texto dentro dele em negrito.-->
+        Puta merda e <strong>AGORA?</strong>
+        <br>
+        <br>
+        <h1 style="color:royalblue">Tag (h1)</h1>
+        <!--A propriedade style serve para modificar ou adicionar estilos em praticamente qualquer tag de HTML. -->
+        <h2>Tag (h2)</h2>
+        <h3>Tag (h3)</h3>
+        <h4>Tag (h4)</h4>
+        <h5>Tag (h5)</h5>
+        <h6>Tag (h6)</h6>
+        <!--
+        Temos os elementos em organizacao de blocos, aonde determinado elemento ocupa um espaco inteiro
+        da esquerda para a direita, ou seja, se eu colocar outro elemento no cidigo ele automaticamente vai para
+        baixado porque o elemento acima ja ocupou todo espaco de cima. Exemplo: <h1>
+        Os elemento inline, nao ocupam um espaco inteiro, apenas um pequeno espaco e se tiver outro elemento abaixo e nao possui
+        pulo de linha ele ira ficar ao lado deste primeiro elemento. Exemplo: <a href=">
+        -->
+        
+        <!--
+        Estas tags de h1 a h6 formatam um texto para deixa-lo grande ou pequeno.
+        Dentro de cada arquivo HTML apenas pode ter um de cada h1
+        -->
+        <ul>
+            <li>Lista nao ordenada!</li>
+            <li>Outro item de uma lista nao ordenada.</li>
+            <li>Ultimo item de uma lista nao ordenada.</li>
+        </ul>
+
+        <ol>
+            <li>Lista ordenada!</li>
+            <li>Outro item de uma lista ordenada.</li>
+            <li>Ultimo item de uma lista ordenada.</li>
+        </ol>
+
+        <ul>
+            <li>Lista Hierarquica!</li>
+            <ol>
+                <li>O primeiro item.</li>
+                <li>O segundo item.</li>
+                <li>O tericeiro item.</li>
+                <li>O quarto item.</li>
+                <li>O quinto item.</li>
+            </ol>
+            <ul>
+                <li><strong>Obs:</strong> Isto e uma lista Hierarquica</li>
+            </ul>
+        </ul>
+
+        <ol start="100">
+            <li>Protocolo TCP/IP</li>
+            <li>Protocolo FTP</li>
+            <li>Protocolo SSH</li>
+            <li>Protocolo HTTP</li>
+        </ol>
+        <!--
+            A lista nao ordenada <ul> e uma lista aonde nao possui uma ordem de valores.
+            Por exemplo as bolinhas (•) na frente do texto. 
+
+            A lista ordenada <ol> e uma lista onde possui uma ordem de valores.
+            Por exemplo nos numeros, 1., 2., 3. na frente do texto.
+
+            <ul><\ul> = Lista Nao Ordenada
+            <ol><\ol> = Lista Ordenada.
+            <li><\li> = Item da Lista.
+        -->
+        <dl>
+            <dt>Titulo 1</dt>
+            <dd>Definicao 1</dd>
+            <dt>Titulo 2</dt>
+            <dd>Definicao 2</dd>
+            <dt>Titulo 3</dt>
+            <dd>Definicao 3</dd>
+        </dl>
+        <!-- <dt> e um titulo <dd> e uma definicao-->
+        <a href="https://www.google.com" title="Pagina do Google" target="_blank"> Google</a><br>
+        <!--
+        Uma tag âncora (a) é usada para definir um link.
+        href: esta propriedade estabelece a referência de hipertexto (hypertext reference), que pode ser externa ou mesmo interna, no mesmo documento.
+        Esta é a única tag obrigatória.
+        O destino do link é definido no atributo href da tag.
+        O link pode ser absoluto, como “http://www.htmldog.com”, ou pode ser relativo à página atual.
+        -->
+            <a href="#top" title="Voltar ao Topo da Pagina">Voltar ao top</a>
+            <!--Pegamos o id de #top que quando cliamos ele vai para topo da pagina.-->
+            <br><br>
+            <h3><p>Bob's GIF</p></h3>
+        <iframe src="https://giphy.com/embed/7DzlajZNY5D0I" style="border-radius: 25px;" width="480" height="310" frameBorder="1" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/girls-weird-sassy-7DzlajZNY5D0I"></a></p>
+            <h3><p>Wolf</p></h3>
+            <img src="wolf.jpg" width="480" height="360" alt="Wolf_error" title="This is a Eletric Wolf" style="border-radius: 25px;">
+            <!--O atributo src informa ao navegador onde encontrar a imagem. O local da Imagem.
+                Sobre o elemento alt, caso tenha algum problema em que agente nao consiga exibir a imagem, estara aparecendo o conteudo de "alt"
+                Pode ser caminhos basolutos ou relativos.
+
+                O elemento title="" quando passar o mouse sobre a imagem ele ira aparecer o conteudo de title.
+
+                A altura(height) e largura(width) sao necessarios.
+
+                O atributo alt é a descrição alternativa. Esta é uma consideração de acessibilidade, fornecendo informações
+                significativas para usuários que não conseguem ver a imagem (se forem deficientes visuais, por exemplo).
+                Não possui elementos dentro de img e nenhuma tag de fechamento.
+            -->
+
+            <!--Um JPEG (pronuncia-se “jay-peg”) usa um algoritmo matemático para comprimir a imagem e distorce ligeiramente o original.
+            Quanto menor a compactação, maior será o tamanho do arquivo, mas mais nítida será a imagem.
+            JPEGs são normalmente usados ​​para imagens, como fotografias.
+
+            Um GIF (pronuncia-se “jif”) não pode ter mais que 256 cores, mas mantém as cores da imagem original.
+            Quanto menor for o número de cores da imagem, menor será o tamanho do arquivo. Os GIFs também permitem que qualquer pixel da imagem seja transparente.
+            GIFs são normalmente usados ​​para imagens com cores sólidas, como ícones ou logotipos.
+
+            Um PNG (pronuncia-se “ping”) replica cores, bem como um GIF, mas permite 16 milhões de cores, bem como transparência
+            alfa (ou seja, uma área pode ser 50% transparente).
+            PNGs são normalmente usados ​​para imagens versáteis em designs mais complexos, MAS eles não são
+            totalmente suportados por alguns navegadores mais antigos.-->
+            <br><br>
+            <span style="background: #1abc9c; border-radius:100px; padding:20px"> <font size=5 style="text-align:left">Dog's Voice</font> </span>
+            <!--
+            Atributo padding aumenta o tamanho do ciruclo em que o esta esta envolto
+            O atributo border-radius deixa a borda redonda.
+            A propriedade style serve para modificar ou adicionar estilos em praticamente qualquer tag de HTML.
+            Sua estrutura é simples, com informações agrupadas como "propriedade:valor", podendo ter mais de uma propriedade diferente.
+
+            Use background-color para mudar a cor de fundo (colocamos yellow/amarelo)
+            Use font-face para mudar o tipo de fonte (usamos Verdana)
+            Use color para mudar a cor do texto (usamos red/vermelho)
+            Use font-size para mudar o tamanho do texto (usamos 30px)
+            Use text-align para mudar o alinhamento do texto entre a esquerda, direita ou centralizado (usamos center/centro)
+            -->
+            <br><br>
+        <fieldset>
+            <legend>Table</legend>
+            <table border="2" bgcolor="red" style="border-radius: 25px;">
+                <!--
+                    Tag é um código usado para marcar o início e, onde for requerido, o fim de um elemento HTML.
+                    Há, como exposto acima, tags de abertura e de fechamento. Uma tag de abertura é representada por sinal de menor ( < ), um nome de 
+                    elemento HTML, e um sinal de maior ( > ) (ex. < p >) e deve ser colocada imediatamente antes do início do conteúdo do elemento.
+                    Uma tag de fechamento se diferencia de uma tag de abertura apenas por uma barra ( / ) antes do nome do elemento (ex. < /p >) e deve
+                    ser colocada imediatamente após o fim do conteúdo do elemento.
+                    Neste caso o elemento e "table"
+                    
+                    Os Atributos servem para definir uma propriedade de um elemento HTML.
+                    Os atributos HTML devem ser colocados sempre na tag de abertura, logo após o nome do elemento, precedido de um espaço e é composto
+                    de um nome de atributo, um sinal de igual ( = ) e um valor de atributo, cercado por aspas duplas (” “) ou simples ( ‘ ).
+                    Neste caso o atributo e border="2"
+
+                    O atributo <bgcolor> e um atirbuto de tabela onde colore toda a tabela de um determinada cor
+                -->
+                <caption>Caption Exemplo</caption>
+                <!--A tag <caption> coloca um titulo sobre a tabela.-->
+                <thead>
+                <!--thead e o titulo de cada coluna da tabela.-->
+                    <th>Coluna 1</th>
+                    <th>Coluna 2</th>
+                    <th>Coluna 3</th>
+                    <!--A tag <th> deixa as palavras em negrito-->
+                </thead>
+                <tbody> <!--O Corpo da tabela, aonde estarao todos os dados.-->
+                    <tr><!--Linha 1-->
+                        <td> Linha 1, célula 1</td>
+                        <td> Linha 1, célula 2</td>
+                        <td> Linha 1, célula 3 </td>
+                    </tr>
+                
+                <tr> <!--Linha 2-->
+                    <td> Linha 2, célula 1</td>
+                    <td> Linha 2, célula 2</td>
+                    <td> Linha 2, célula 3 </td>
+                </tr>
+                <tr><!--Linha 3-->
+                    <td> Linha 3, célula 1</td>
+                    <td> Linha 3, célula 2</td>
+                    <td> Linha 3, célula 3 </td>
+                </tr>
+                <tr><!--Linha 4-->
+                    <td> Linha 4, célula 1</td>
+                    <td> Linha 4, célula 2</td>
+                    <td> Linha 4, célula 3</td>
+                </tr>
+                </tbody>
+                <tfoot> <!--O rodape da tabela. Onde estarao os resumo e/ou resultados.-->
+                    <td colspan="3"><b>Isto e um cabeçalho</b></td>
+                </tfoot>
+            </table>
+            <br>
+            <table border="2">
+                <caption><font color="blue">Complete Table</font></caption>
+                <colgroup>
+                    <col span="2" style="background-color:blue">
+                    <!--O valor do atributo span="" define quantas colunas devem ficar com esta cor, no caso 2 colunas vao ficar da cor azul-->
+                    <col style="background-color:red">
+                    <!--
+                    <colgroup> e <col> Em tabelas mais robustas e bem trabalhadas, estas duas tags servem para atribuir elementos de estilo as colunas.
+                    A tag <colgroup> é útil para definir estilizações para todos os elementos da tabela. O <colgroup> deve ser filho da tag <table> e estar
+                    antes de qualquer outra tag da tabela. Já o <col> é mais específico e é usado para estilizar de forma diferente as colunas
+                    presentes dentro <colgroup>.
+                    -->
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody align="center">
+                    <!--O atributo align pode usar os valores left para deixa tudo dentro de uma celula do lado esquerdo
+                    center para deixar centralizado e right para coloca-lo na direita-->
+                    <tr>
+                        <th rowspan="2">Carla</th>
+                        <td>Rua A</td>
+                        <td>1111-1111</td>
+                    </tr>
+                    <tr>
+                        <td>Rua B</td>
+                        <td>2222-2222</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Marcelo</th>
+                        <td>Rua C</td>
+                        <td>3333-3333</td>
+                    </tr>
+                    <tr>
+                        <td>Rua D</td>
+                        <td>4444-4444</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="3">Informacoes de Carla e Marcelo</td>
+                </tfoot>
+                <!--<thead>: A tag <thead> apresenta a funcionalidade de agrupar elementos do conteúdo de um cabeçalho no HTML.
+                Ela deve ser usada como filho de um elemento <table>, ou seja, estar após <table>, e antes de qualquer <tbody>, <tr> ou <tfoot>.
+                <tbody>: Esta tag é usada para aglutinar elementos presentes no conteúdo do corpo de uma tabela, ou seja, nas linhas da tabela. É utilizada
+                como filho de um elemento <table> e após qualquer <subtítulo>, <coolgroup> ou <thead>.
+                <tfoot>: A tag <tfoot> é utilizada para definir conteúdos de rodapé dentro de uma tabela e juntá-lo ao corpo e ao cabeçalho. O elemento
+                <tfoot> deve ser filho de <table>, estar após o <thead> e antes das tags <tbody>, <tr> e <td>.-->
+            </table>
+        </fieldset>
+        <br>
+        <!--O elemento <table><\table> define uma table
+            O elemento <tr><\tr> define uma linha da tabela
+            O elemento <td><\td> define cada celula/quadrado em uma linha, podendo ter infenidas celuas em uma linha.-->
+                <form action="login.php" method="post">
+                    <fieldset>
+                        <legend>Login</legend>
+
+                        <label for="username">Username: </label>
+                        <input type="text" name="username" id="username" placeholder="Type your name" style="border-radius: 10px;">
+                        <label for="password">Password: </label>
+                        <input type="password" name="password" id="password" value="Password123" style="border-radius: 10px;">
+                        <input type="submit" value="Logar"> 
+                        <!--Names
+                            Todas as tags mencionadas acima parecerão muito boas apresentadas na página, mas se você conectar seu formulário
+                            a um script de manipulação de formulários, todas serão ignoradas.
+                            Isso ocorre porque os campos do formulário precisam de nomes.
+                            Portanto, para todos os campos, o nome do atributo precisa ser adicionado, 
+                            por exemplo <input type = "text" name = "talkingsponge">-->
+                    </fieldset>
+                </form>
+                <!--Formularios (Forms)
+                    Os formulários são usados ​​para coletar dados inseridos por um usuário.
+                    Por si só, os formulários geralmente não são especialmente úteis.
+                    Eles tendem a ser usados ​​em conjunto com uma linguagem de programação para processar as informações inseridas pelo usuário.
+                    As tags básicas usadas no HTML real dos formulários são: form, input, textarea, select and option.
+                    Um atributo de ação(action) é necessário para informar ao formulário para onde seu conteúdo será enviado.
+                    O atributo method diz ao formulário como os dados serão enviados e pode ter o valor get, que é o padrão, e prende
+                    as informações do formulário em um endereço da web, ou postagem (post), que (essencialmente) envia 
+                    #invisivelmente as informações do formulário.
+                    method get é usado para blocos menores de informações não confidenciais - você pode ver as informações 
+                    que enviou na pesquisa de um site para aparecer no endereço da web de sua página de resultados de pesquisa, por exemplo.
+                    post é usado para envios mais longos e seguros, como em formulários de contato.-->
+                <br>
+                <form action="InputTypes.php" method="POST">
+                    <fieldset>
+                        <legend>Tipo de Input</legend>
+
+                        <p><label for="text">Text: </label>
+                        <input type="text" name="text" id="text" value="Text"></p>
+
+                        <p><label for="password">Password: </label>
+                        <input type="password" name="password" id="password" value="Password"></p>
+
+                        <P><label for="checkbox">Checkbox: </label>
+                        <input type="checkbox" name="checkbox" id="checkbox" value="checkbox"></P>
+                        <P><label for="checkbox2">Checkbox2: </label>
+                        <input type="checkbox" name="checkbox2" id="checkbox2" value="checkbox2"></P>
+                        <P><input type="checkbox" name="checkbox3" id="checkbox3" value="checkbox3">
+                        <label for="checkbox3">Checkbox3: </label></P>
+                        <!--Name aqui e diferente porque eu posso marcar mais de uma vez.-->
+
+                        <fieldset>
+                            <legend>Radios</legend>
+                            <div>
+                                <p><label for="radio">Radio: </label>
+                                <input type="radio" name="radio" id="radio" value="radio"></p>
+                            </div>
+                            <div>
+                                <p><label for="radio2">Radio2: </label>
+                                <input type="radio" name="radio" id="radio2" value="radio2"></p>
+                            </div>
+                            <div>
+                                <p><input type="radio" name="radio" id="radio3" value="radio3">
+                                <label for="radio3">Radio3: </label></p>
+                                <!--name neste form todos recebem radio porque apenas o que deve mudar e o value e id dependendo do 
+                                qual radio o usuario preencher! "Elo de Radios" e sempre apenas um dos radios sera selecionado.-->
+                                <!--Value na minha base de dados caso eu aperte seleciona o radio3 ele recebera o valor (value) radio3-->
+                            </div>
+                            <div><input type="text" value="input 3"></div>
+                    <!--Tipos de Input
+                    <input type = "text"> ou simplesmente <input> é uma caixa de texto padrão.
+                    Isso também pode ter um atributo de valor, que define o texto inicial na caixa de texto.
+
+                    <input type = "password"> é semelhante à caixa de texto, mas os caracteres digitados pelo usuário ficarão ocultos.
+                    
+                    <input type = "checkbox"> é uma caixa de seleção que pode ser ativada e desativada pelo usuário.
+                    Isso também pode ter um atributo marcado (<input type = "checkbox" selected> - o atributo não requer um valor) e 
+                    faz com que o estado inicial da caixa de seleção seja ativado, por assim dizer.
+
+                    <input type = "radio"> é semelhante a uma caixa de seleção, mas o usuário só pode selecionar um botão de opção em
+                    um grupo. Isso também pode ter um atributo marcado.
+
+                    <input type = "submit"> é um botão que, quando selecionado, enviará o formulário. Você pode controlar 
+                    o texto que aparece no botão de envio com o atributo de valor, por exemplo <input type = "submit" value = "Ooo. Olhe.
+                    Texto em um botão. Uau">.-->
+                        </fieldset>
+                        <!--O "name" do input radio deve ser o mesmo para todos os input para que ele sejam compartilhado e apenas possua
+                        apenas um preenchido por vez.-->
+                        <br>
+                        <div><input type="submit" name="submit" id="submit">Button Test</p></div>
+                        <strong>Range - </strong> <input type="range">
+                        <br/>
+                        <fieldset>
+                            <legend>Text Area</legend>
+                            <textarea placeholder="Type a Text" rows="10" cols="25"></textarea>
+                        </fieldset>
+                        <!-- Text Area - textarea é, basicamente, uma grande caixa de texto com várias linhas.-->
+                    </fieldset>
+                </form>
+
+                <br>
+                <form action="Select.php">
+                    <fieldset>
+                        <legend>Select Options</legend>
+                        <label for="select">Select Options: </label>
+                        <select name="select" id="select">
+                            <option value="Select1">Select1</option>
+                            <option value="Select2">Select2</option>
+                            <option value="Select3">Select3</option>
+                            <option value="Select4">Select4</option>
+                        </select>
+                        <!--Select
+                        A tag de select funciona com a tag de opção para fazer caixas de seleção suspensas.
+                        Assim, no exemplo acima, se o primeiro item for selecionado, “Option 1” será enviada, se o terceiro
+                        item for selecionado, “third option” será enviada.-->
+                    </fieldset>
+                </form>
+                </form>
+                <br>
+                <form action="Uploadfile.php" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Upload file</legend>
+                        <label for="uploadfile">File name: </label>
+                        <input type="file" name="uploadfile" id="uploadfile">
+                    </fieldset>
+                </form>
+                <br>
+        <font size=5 color="#FB0505"><div style="text-align:left">Dog's Voice: </font><br>
+        <audio controls src="audio_cachorro.ogg"></audio>
+        <font size=5 color="#FB0505"><div style="text-align:left">Among Us: </font><br>
+        <video src="among_us.mp4" width="100%" height="480" controls></video>
+        <!--Colocamos o texto para o lado esquerdo.-->
+    </body>
+    <!--"CONCLUSOES FINAIS" - As tags tendem a não fazer muito mais do que marcar o início e o fim de um elemento.
+        Elementos são os bits que constituem as páginas da web.
+        Você diria, por exemplo, que tudo o que está entre (e inclui) as tags <body> e </body> é o elemento do corpo.
+        Como outro exemplo, enquanto “<title>” e “</title>” são tags, “<title> Rumple Stiltskin </title>” é um elemento de título.-->
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript Polimorfismo</title>
+</head>
+<body>
+    <script>
+        //O poliformismo e sobreescrever alguma coisa da classe herdada, podendo ser alguma coisa um metodo, um atributo e etc
+        class Talher
+        {
+            constructor (material, funcao) {
+                this.material = material
+                this.funcao = funcao
+            }
+        }
+
+        class Colher extends Talher
+        {
+            constructor (material, funcao, valor) {
+                super(material, funcao, valor)
+                this.valor = valor
+            }
+
+            pegarCaldo () {
+                console.log("Caldo coletado")
+            }
+        }
+
+        class Faca extends Colher
+        {
+            constructor () {
+                super()
+            }
+
+            pegarCaldo () {
+                console.log("Faca nao pode pegar Caldo")
+            }
+        }
+
+        let colher1 = new Colher("Ferro", "Pegar Caldo", 2.50)
+        console.log(colher1)
+        colher1.pegarCaldo()
+
+        let faca1 = new Faca("Ouro", "Cortar", 3.00)
+        console.log(faca1)
+        faca1.pegarCaldo()
+    </script>
+</body>
+</html>

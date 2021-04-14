@@ -1,0 +1,108 @@
+body {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: #ffc;
+    margin: 20px;
+    padding: 0;
+}
+
+/* This is a comment, by the way */
+
+p {
+    line-height: 21px;
+}
+
+h1 {
+    color: #ffc;
+    background-color: #900;
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5em;
+    border-bottom-color: #c00;
+}
+
+h2 {
+    color: white;
+    background-color: #090;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 2px;
+    padding-left: 14px;
+}
+
+h3 {
+    color: #999;
+    font-size: 1.25em;
+}
+
+img {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #ccc;
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+li {
+    color: #900;
+    font-style: italic;
+}
+
+table {
+    background-color: #ccc;
+}
+
+
+body {
+    font-size: 14px;
+    color: navy;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: #ffc;
+    background-color: #009;
+}
+
+p {
+    font-size: medium;
+    font-weight: 900;
+    /*Deixa em negrito da forma mais forte*/
+    font-variant: small-caps;
+    /*Deixa o espaco entre as letras pequenos*/
+    text-transform: uppercase;
+    /*Deixas os caracteres em letras maiusculas*/
+    font-style: oblique;
+    /*Deixa o texto italico*/
+    text-decoration: line-through;
+    /*Risca o testo com uma linha na sua frente. Obs: Semelhante ao <strike>*/
+    border-style: dashed;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: red;
+}
+
+h2 {
+    letter-spacing: 0.5em;
+    word-spacing: 2em;
+    line-height: 1.5;
+    text-align: center;   
+    margin: 20px;
+    padding: 40px;
+    background-color: #ccc;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript Polimorfismo</title>
+</head>
+<body>
+    <script>
+        class TesteImparOuPar
+        {
+            constructor (num) {
+                this.num = num
+            }
+
+            Testar () {
+                if (this.num % 2 == 0){
+                    console.log("Par")
+                } else {
+                    console.log("Impar")
+                }
+            }
+        }
+
+        let Teste1 = new TesteImparOuPar(6)
+        console.log(Teste1)
+        Teste1.Testar()
+    </script>
+</body>
+</html>

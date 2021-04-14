@@ -1,0 +1,17 @@
+.pink_text{ /*Isto e uma classe
+    Obs: Tem que ter um ponto antes de toda classe*/
+    text-align: center; /*Alinhamento de Texto para o centro*/
+    color:pink; /*Cor do texto em Rosa*/
+    background-color: lightgrey; /*Fundo do texto em cinza claro*/
+}
+#botao_bonito{/*Isto e um ID
+    Obs: Tem que ter um asterisco antes de cada ID
+    Obs: Cada tag pode apenas receber uma ID*/
+    color: pink; /*Cor do elemento em Rosa | Cor da Fonte*/
+    padding-top: 15px; /*Espaco superior entre o texto e o elemento*/
+    padding-bottom: 15px; /*Espaco inferior entre o texto e o elemento*/
+    padding-right: 15px; /*Espaco a direita entre o texto e o elemento*/
+    padding-left: 15px; /*Espaco superior entre o texto e o elemento*/
+    background-color: purple;
+    border-radius: 25px;
+}

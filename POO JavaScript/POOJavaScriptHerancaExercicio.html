@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO JavaScript Heranca</title>
+</head>
+<body>
+    <script>
+        // Criar uma super classe (classe pai) veículo, e duas subclasses (classes filhas), exemplo carro e caminhão, com pelo menos um atributo ou método de diferença, herdar os atributos iguais da classe pai. Exibir os atributos.
+
+        class Veiculo
+        {
+            constructor(motor) {
+                this.motor = motor
+            }
+        }
+
+        class Carro extends Veiculo
+        {
+            constructor (motor, qtdBancos) {
+                super(motor, qtdBancos)
+                this.qtdBancos = qtdBancos
+            }
+
+            abrirPortaMala () {
+                console.log("Abriu o Porta Mala")
+            }
+        }
+
+        class Caminhao extends Veiculo
+        {
+            constructor (motor, carga) {
+                super(motor, carga)
+                //Eu tenho que passar para o constructor e o super os parametros dos atributos tanto da classe pai como da filha que e esta no caso e pai e a Veiculo.
+                //A palavra-chave super é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.
+                this.carga = carga
+            }
+
+            dispensarCarga () {
+                console.log("Carga foi dispensada")
+            }
+        }
+
+        let carro1 = new Carro("Motor de Carro V8", 4)
+        console.log(carro1)
+        carro1.abrirPortaMala()
+
+        let caminhao1 = new Caminhao("Motor de Caminhao V8", "Grande")
+        console.log(caminhao1)
+        caminhao1.dispensarCarga()
+    </script>
+</body>
+</html>

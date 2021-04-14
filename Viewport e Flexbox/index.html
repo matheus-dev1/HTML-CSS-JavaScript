@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Usando VH(Viewport Height) e VW(Viewport Width)</title>
+        <link rel="stylesheet" type='text/css' href="styles.css">
+        <script src='script.js'></script>
+        <!--A altura do corpo do documento(body) nao possui altura pre definida, ou seja, ela por padrao
+        possui uma altura auto.-->
+
+        <!--
+            A media funciona semelhante a porcentagem, ou seja, 1vh ou 1vw e igual a 1%
+
+            VH (Viewport Height)
+            VW (Viewport Width)
+
+            .container {
+                background-color: aquamarine;
+                height: 100vh; /*Altura*/
+                width: 100vw; /*Largura*/
+                }
+
+                O display flex deve ser aplicado em um elemento pai, chamado de container
+                Os elementos filhos desse container são chamados de flex-items e por padrao serao
+                alinhados em linha (flex-direction: row).
+        -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+        </div>
+    </body>
+</html>

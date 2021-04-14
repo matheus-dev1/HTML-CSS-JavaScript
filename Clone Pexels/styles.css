@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+}
+
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.banner {
+    background-image: url(./img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    height: 425px;
+    padding-top: 50px;
+
+}
+.btn_register {
+    border: 0;
+    border-radius: 10px;
+    background: green;
+    padding: 15px;
+    font-size: large;
+    color: white;
+}
+.banner a {
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    padding: 10px;
+}
+.banner h1 {
+   padding: 50px;
+
+}
+
+.banner input {
+    width: 500px; /* Largura do Input*/
+    height: 42px; /* Altura do Input*/
+    padding: 0 16px; /* Aumentamos um pouco o espacamento interno do input*/
+    border-radius: 6px; /* Arredondamento das bordas */
+    border: 0;
+}
+
+.section2 a{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    padding: 10px;
+}
+
+.photos h2{
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.photos img {
+    width: 25%;
+    margin: 0px 20px 20px 0px;
+}

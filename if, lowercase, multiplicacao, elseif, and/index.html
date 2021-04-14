@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Exercicios com Estrutura Condicional</title>
+    </head>
+
+    <body>
+        <script>
+            let salary = +prompt("Digite seu salario: ");
+            let sex = prompt("Digite seu sexo[M/F]: ");
+            if (salary <= 600 && sex.toLowerCase() == "m") {
+                salary = salary * 0.2;
+                document.write("Salario " + salary + " ajustado com 20% de Desconto!")
+            }
+            else if (salary <= 1200 && sex.toLowerCase() == "f") {
+                salary = salary * 0.2;
+                document.write("Salario " + salary + " ajustado com 20% de Desconto!")
+            }
+            else if (salary <= 2000 && sex.toLowerCase() == "m") {
+                salary = salary * 0.25;
+                document.write("Salario " + salary + " ajustado com 25% de Desconto!")
+            }
+            else {
+                salary = salary * 0.30;
+                document.write("Salario " + salary + " ajustado com 25% de Desconto!")
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta lang="pt-br">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" text="text/css" href="styles.css">
+    <title>Onchange JavaScript</title>
+</head>
+<html>
+<body>
+    <!-- Um paragrafo -->
+    <p>Select a new car from the list.</p>
+    <!-- Quando eu mudar o valor este select, ele ira executar esta funcao. -->
+    <select id="mySelect" onchange="myFunction()">
+    <option value="Audi">Audi</option>
+    <option value="BMW">BMW</option>
+    <option value="Mercedes">Mercedes</option>
+    <option value="Volvo">Volvo</option>
+    </select>
+
+    <p>
+        When you select a new car, a function is triggered which outputs the value of the selected car.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            // Eu vou slecionar o elemento do select, para conseguir resgatar o valor.
+            var SelectElement = document.getElementById("mySelect").value;
+            // Com a mudanca feita, o valor e resgatado e escrito no elemento id="demo"
+            document.getElementById("demo").innerHTML = "You selected: " + SelectElement;
+        }
+    </script>
+</body>
+</html>
