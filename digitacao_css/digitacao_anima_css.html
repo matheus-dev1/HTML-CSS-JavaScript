@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<html>
+    <head>
+        <meta lang=pt-br/>
+        <meta content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <title>Animacao de Digitacao com CSS</title>
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: rgb(25, 25, 25);
+            }
+            .letters {
+                /* Aqui eu setei a minha borda solida, com dois pixels de altura e largura e branco */
+                border-right: solid 2px white;
+                font-family: 'Bangers', cursive;
+                color: rgba(255, 255, 255, 0.75);
+                text-align: center;
+                font-size: 3em;
+                margin: 0 auto;
+                /* Eu vou colocar esta propriedae para nao quebrar o meu paragrafo, quebrar quer dizer que o seu o tamnaho do seu elemento foi alterado de uma forma indesejavel, tanto aumentando, diminuindo, indo para outro lado da tela, mas tendo um comportamento indesejavel*/
+                /* No nosso caso o nosso paragrafo estava com a largura muito pequena fazendo com que a altura dele aumentasse para que coubesse dentro do paragrafo */
+                white-space: nowrap;
+                /* Se o conteudo do meu elemento que no caso um paragrafo for maior que a largura do elemento ele fica escondido. */
+                overflow: hidden;
+            }
+
+            .animacao_digitando {
+                /* Aqui eu declaro que a animacao piscar vai estar contido nesta class(.letters) e de 0 a 100% vai ter uma duracao de 2 segundo e vai ocorrer infinitamente. */
+                /* No CSS ordem nao importa */
+                /* Isso esta funcionando por que a classe .letters colocou uma borda na direta e como a classe .animacao_digitando esta no mesmo elemento em que a borda foi setada, a propriedade border-right-color foi liberada. */
+                animation: piscar 1s steps(40) infinite normal,
+                /* Normal quer dizer que ele vai exeucatar na velocidade normal */
+                /* O calculo do step e simples, pense que o nosso keyframes tem 100% eu vou divir 100% por 4 que vai far 25% ou seja a cada passo a animacao vai concluir 25% da animacao. */
+                /* Se eu quiser rodar masi de uma animacao por elemento eu separo por uma virgula. */
+                digitando 4s steps(25) 1s normal both;
+            }
+
+            @keyframes digitando {
+                from {
+                    width: 0;
+                }
+                to {
+                    width: 8.5em;
+                }
+            }
+
+            @keyframes piscar {
+                /* Aqui eu pego a borda do elemento/classe/id onde esta a minha propriedade "animarion" e altero sua cor */
+                from {
+                    border-right-color: rgba(255, 255, 255, 0.75);
+                }
+                to {
+                    border-right-color: rgb(25, 25, 25);
+                }
+            }
+        </style>
+
+        <p class="letters animacao_digitando">Ola, eu sou o Matheus</p>
+    </body>
+</html>
