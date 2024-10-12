@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 3</title>
+    <style>
+        table, tr, td, th
+        {
+            border: 1px solid red; 
+        }
+    </style>
+    <!--Podemos definuir valores de determinados atributros e aplicar automaticamente a qualquer ocorrencia desta tag.
+    Por exemplo aqui nos definimos e a table e linha (tr) e colunas (th) e (td) com o atributo border entao todos os tables terao
+    uma borde de um pixel, solid e vermelha neste arquivo.-->
+</head>
+<body>
+    <h3 style="color: red;"><b>Compra de um Carro</b></h3>
+    <p>Neste formulario voce de informacoes dados sobre: Nome, Idade, Data de Nascimento e nenhum ou mais veiculos!</p>
+    <h2><b>Formulário de Escolha</b></h2>
+    <table border="1" width="100%">
+        <caption><font size=4 face="Arial"><b>Tabela de Precos</b></font></caption>
+        <!--Atributo face="Arial" faz com que ao tipo da letra sera Arial-->
+        <!--Atributo valign="top" faz com que todo o conteudo sera remanejado de lado vertical-->
+        <thead>
+            <tr>
+                <th>Tipo: </th>
+                <th>Modelo: </th>
+                <th>Valor: </th>
+            </tr>
+        </thead>
+
+        <tbody align="center">
+            <!--Conseguimos usar o atributo align com o valor center para centralizar todos os dados do corpo da tabela.-->
+            <tr>
+                <th>Carro: </th>
+                <td>Ford</td>
+                <td>25,000</td>
+            </tr>
+            <tr>
+                <th>Moto: </th>
+                <td>Honda</td>
+                <td>9,000</td>
+            </tr>
+                <tr>
+                <th>Barco: </th>
+                <td>Finisher</td>
+                <td>250,000</td>
+            </tr>
+            <tr>
+                <th>Bicicleta: </th>
+                <td>Caloi</td>
+                <td>1,500</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Formulario do Usuairo</h2>
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome" name="nome" style="border-radius: 25px;"><br><br>
+    <label for="idade">Idade: </label>
+    <input type="number" name="idade" id="idade" style="border-radius: 25px;"><br><br>
+    <label for="data_nascimento">Data de Nascimento: </label>
+    <input type="date" name="data_nascimento" id="data_nascimento" style="border-radius: 25px;"><br><br>
+    <label for="color">Cor favorita: </label>
+    <input type="color" name="color" id="color" style="border-radius: 25px;">
+    <br><br>
+    <form action="">
+        <input type="checkbox" name="veiculo1" id="veiculo1" value="carro" checked>
+        <label for="veiculo1">Carro</label><br>
+        <input type="checkbox" name="veiculo2" id="veiculo2" value="moto">
+        <label for="veiculo2">Moto</label><br>
+        <input type="checkbox" name="veiculo3" id="veiculo3" value="barco">
+        <label for="veiculo3">Barco</label><br>
+        <input type="checkbox" name="veiculo4" id="veiculo4" value="bicicleta">
+        <label for="veiculo4">Bicicleta</label><br>
+    </form>
+</body>
+</html>

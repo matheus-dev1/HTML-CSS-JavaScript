@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String, Math and JSON</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>String, Math and JSON</h1>
+
+    <script>
+        let name = "Matheus de Olivera Silva"
+        console.log(name.substring(0, 7))
+        console.log(name.split())
+        /*Tranforma em um Array*/
+        console.log(name.toUpperCase())
+        console.log(name.toLowerCase())
+        let pi = 3.1416;
+        console.log(Math.round(pi))
+        pi = -3.1416;
+        console.log(Math.abs(pi))
+        console.log(Math.floor(pi))
+        /*Sempre vai mostrar o numero pra baixo*/
+        console.log(Math.pow(5, 2)) /*Elevado ao quadrado*/
+        console.log(Math.pow(5, 8)) /*Base Binaria*/
+        let names = {
+            "Matheus": 21,
+            "Karina": 26,
+            "Cida": 44,
+            soma: (num, num2) => num + num2,
+            hobbies: [
+                "jogar", "filmes", "series", "resturantes"
+            ]
+        }
+        console.log(names)
+        console.log(names.Cida)/*Pegando o metodo de "Cida"*/
+        console.log(names.name)
+        console.log(names.soma(5, 4))
+        console.log(names.hobbies)
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style> 
+        #area {
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            --line-height: 100px;
+            text-align: center;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos DOM</h1>
+    <div id="area">
+        <!--onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"
+        
+        Nesta linha seria o uso dos eventos no HTML-->
+        Isto e uma div...
+    </div>
+    <script>
+        /*Evento e tudo o que pode acontecer a um elemento.*/
+        let div1 = window.document.getElementById('area')
+        div1.addEventListener('click', clicar)
+        div1.addEventListener('mouseenter', entrar)
+        div1.addEventListener('mouseout', sair)
+        /*Nesta linha nos vamos usa mo metodo addEventListener que vai ficar aguardando determinado evento ocorre
+        para executar uma funcao que estara como segundo argumento do metodo.
+        
+        Obs: Caso ocorra um erro no seu arquivo JAvaScript, normalmente nos conseguimos visualiza-lo atraves do console
+        do navegador!!!*/
+
+        function clicar() {
+            let div1Clicar = window.document.getElementById('area')
+            div1Clicar.style.background = 'purple'
+            div1Clicar.style.color = 'blue'
+            div1Clicar.innerText = 'Cliclado!'
+        }
+        function entrar () {
+            let div1Entrar = window.document.getElementById('area')
+            div1Entrar.innerText = 'Entrou!'
+            div1Entrar.style.background = 'red'
+        }
+        function sair () {
+            let div1Sair = window.document.getElementById('area')
+            div1Sair.style.background = 'gray'
+            div1Sair.innerText = 'Saiu!'
+        }
+    </script>
+</body>
+</html>

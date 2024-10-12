@@ -1,0 +1,19 @@
+#cor_nome {
+    color: red;
+}
+
+#cor_hexadecimal {
+    color: #FF00FF;
+}
+
+#color_rgb {
+    color: rgb(255, 0, 0);
+}
+
+#cor_rgb_alpha_0_6 {
+    color: rgb(199, 0, 12, 0.6); /*O 4 argumento de rgb e a transparencia da cor*/
+}
+
+#cor_rgb_alpha_0_3 {
+    color: rgb(96, 50, 2, 0.3); /*O 4 argumento de rgb e a transparencia da cor*/
+}

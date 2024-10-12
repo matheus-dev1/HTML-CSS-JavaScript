@@ -1,0 +1,67 @@
+form, input, label {
+    border: 1px solid red;
+    width: 50%;
+    /*A largura e relativa a 50 porcento da tela.*/
+}
+#item2 {
+    display: none;
+    /*A propriedade display com o valor none vai ocultar este item.
+    Obs: Caso esteja em uma lista o valor sera oculado e a contegem continua*/
+}
+
+#item3 {
+    visibility: hidden;
+    /*A propriedade visibility com o valor hidden nao renderiza o elemento.*/
+}
+
+.container {
+    border: 1px solid blue;
+    padding: 20px;
+    height: 300px;
+    width: 600px;
+}
+
+li {
+    display: inline;
+}
+
+.box {
+    border: 1px solid green;
+    padding: 10px;
+    --display: inline;
+    /*A propriedade display com o valor inline deixa o(s) na mesma linha.
+    Sem ocupa todo os espaco.*/
+    float: right;
+    /*O(s) elementos partem da direira para a esquerda.*/
+}
+
+.primeiro {
+    position: relative;
+    top: 200px;
+    left: 125px;
+    /*Esta div esta com a posicao relativa a DIV PAI que possui a classe container.*/
+    /*Esta dis esta dentro do div pai com a classe "contain" e ela esta a 
+    200px do topo da div pai e 125px do lado esquer da div pai.*/
+    overflow: hidden;
+    /*Caso os caracteres excederem o espaco do elemento, a parte
+    aonde esta excedendo sera ocultada.*/
+}
+
+.segundo {
+    position: absolute;
+    /*A posicao absolute vai ignorar toda a hierarquia de pais dele
+    e vai obedecer apenas a pagina.*/
+    top: 50px;
+    left: 200px;
+    overflow: scroll;
+    /*Caso os caracteres excedem o espaco do elemento, sera criado um sroll
+    para poder escrolar por todo o conteudo.*/
+}
+
+.terceiro {
+    position: fixed;
+    /*Ele fica fixado em um ponto do site e nao site dela nem se voce
+    descer ou subir a pagina*/
+    top: 200px;
+    left: 600px;
+}

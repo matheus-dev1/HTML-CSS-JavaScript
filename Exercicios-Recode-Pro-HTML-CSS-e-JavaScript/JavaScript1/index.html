@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Primeiro Exemplo HTML com JavaScript</title>
+        <script async src="script.js"> /*External*/
+            /*Dentro da Tag Script, aonde sao executados todos os nosso script Internal, podemos passar
+            uma propriedade chamada src(source/origem) onde nos valor passar o arquivo Srcipt onde ele vai
+            pegar os codigos javascript*/
+        </script>
+        <script>/*Intenal*/
+            function Internal() {
+                /*Esta uma funcao sem nenhum parametro!*/
+                document.write("Hello World - Internal");
+                /*A funcao documento.write() sobre-escreve no documento HTML o conteudo da string
+                dentro da funcao.*/
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Primeiros passos no JavaScript</h1>
+        <h2>Inline</h2>
+        <button type="button" onclick='document.write("Hello World - Inline")'>Click me! (Inline)</button>
+        <!--Inline-->
+        <!--A propriedade onclick="" e um evento que e acionado quando clicado!-->
+        <h3>Internal</h3>
+        <button type="button" onclick='Internal()'>Click me! (Internal)</button>
+        <h4>External</h4>
+        <button type="button" onclick='External()'>Click me! (External)</button><br><br>
+        <script>
+            var total;
+            total = 5 + 5 + ": " + "Dez"
+            document.writeln(total);
+            document.writeln('\n');
+            var string = "Paracetamol";
+            string = string.length;
+            document.write("Caracteres de Paracetamol: ");
+            document.writeln(string);
+            document.write(" - ");
+            var date = new Date;
+            /*Podemos passar argumentos ao "Date" para definir uma data e horario especifico.*/
+            document.write(date);
+            document.write(" - Day: ");
+            document.write(date.getDay());
+            document.write(" - Month: ");
+            document.write(date.getMonth() + 1);
+            document.write(" - Year: ");
+            document.write(date.getFullYear());
+        </script>
+    </body>
+</html>

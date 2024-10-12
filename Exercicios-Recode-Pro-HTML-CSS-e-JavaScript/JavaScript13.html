@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Trabalhando com Testes logicos</title>
+    </head>
+
+    <body>
+        <h1>Teste Logico</h1>
+        <script>
+            let idade = 18;
+            let genero = "f";
+            let bairro = "liberdade";
+
+            if (idade >= 18 && genero === "f"){
+                console.log("Certo")
+                if (bairro === "liberdade" || bairro === "charmosa"){
+                    console.log("Caraca tu e pica mesmo!")
+                }
+                else{
+                    console.log("Bairro invalido!")
+                }
+            }
+            else{
+                console.log("Errado!")
+            }
+        </script>
+    </body>
+</html>

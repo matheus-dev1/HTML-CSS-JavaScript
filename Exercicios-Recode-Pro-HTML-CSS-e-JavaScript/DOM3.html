@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM3</title>
+</head>
+<body>
+    <h1 name="h01" id="h01ID">Iniciando estudos com DOM</h1>
+    <p class="p01">Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="divi">Clique aqui</div>
+    <script>
+        /*Com o DOM nos podemos aceesar e alterar conteudo de Tags*/
+        window.document.write(window.document.title, "<br>")
+        window.document.write(window.document.activeElement, "<br>")
+        window.document.write(window.document.ownerDocument, "<br>")
+        let p1 = window.document.getElementsByTagName("p")[0]
+        let corpo = window.document.body
+        window.document.write("Conteudo da primeira tag p:" + p1.innerText)
+        corpo.style.background = "purple"
+        p1.style.color = "red"
+        let divi = window.document.getElementById("divi")
+        divi.style.color = "green"
+        let h1Tag = window.document.getElementsByName("h01")[0]
+        h1Tag.innerText = "Novo H1"
+        let h01Tag = window.document.querySelector("h1#h01ID")
+        h01Tag.innerText = "Novo do Novo H1"
+        let p01 = window.document.querySelector("p.p01")
+        p01.style.background = "gray"
+    </script>
+</body>
+</html>

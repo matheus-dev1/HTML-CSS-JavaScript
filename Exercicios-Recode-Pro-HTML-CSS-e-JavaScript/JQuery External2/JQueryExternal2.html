@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+     <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#btn1").click(function(){
+                        alert("Texto:"+$("#teste").text());
+                        //.text() vai capturar o texto de uma tag.
+                    });
+                    $("#btn2").click(function(){
+                        alert("codigoHTML:"+$("#teste").html());
+                        //.html() vai capturar o texto de um tag, porem se tiver uma tag
+                        //dentro da tag referenciada a tag dentro da tag referencia ele copiara as tags.
+                    });
+                    });
+            </script>
+        </head>
+        <body>
+            <p id="teste">Istoesta<b>emnegrito</b>emalgumtextodoparagrafo</p>
+            <button id="btn1">Exibirotexto</button>
+            <button id="btn2">exibirohtml</button>
+</body>
+</html>

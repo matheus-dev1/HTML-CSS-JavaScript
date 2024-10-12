@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <style>
+        button, input {
+            padding: 5px;
+            border-radius: 6px;
+            border-top: 2px;
+            border-right: 2px;
+            border-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ESomando Numeros</h1>
+    <button type="button" onclick="somar()">Somar</button>
+        <input type="number" name="num1" id="num1Input"> + 
+        <input type="number" name="num2" id="num2Input"> = 
+        <!--O valor destes input's serao de nuemeros-->
+        <div id="result" style="display: inline-block;">Resultado</div>
+    <script>
+        function somar () {
+            let n1Input = window.document.getElementById('num1Input')
+            let n2Input = window.document.getElementById('num2Input')
+            let result = window.document.getElementById('result')
+            /*Nos temso que pegar o valor obtido pelo input e armazenar em uma outra variavel, porque o valor recebido
+            de um input e texto, entao nos temos que fazer essa conversao atraves da funaco Number()*/
+            let n1 = Number(n1Input.value)
+            let n2 = Number(n2Input.value)
+            let soma = n1 + n2
+            result.innerHTML = `A soma entre ${n1} + ${n2} e igual a ${soma}!`
+            /*Com este (`) nos podemos uar o ${} fazendo com que a gente nao precise concatenar string!*/
+        }
+    </script>
+</body>
+</html>

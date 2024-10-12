@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta lang="pt-br">
+    <meta charset="UTF-8">
+    <title>Trabalhando com DOM</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <input type="text" id="recebe" value="">
+    <button type="submit" onclick="mostrar()">Butao</button>
+    <br><br>
+    <label for="option1">
+        <input type="radio" name="color" id="option1"> Red
+        <!--A propriedade "checked" deixa o raio ja marcado quando iniciar a pagina-->
+        <!--NA label nos podemos passar o id do input, fazendo com que ele faca parte do "click"-->
+    </label>
+    <label for="option2">
+        <input type="radio" name="color" id="option2"> Blue
+        <!-- A propriedade "name" serve para identificar sobre qual sentido serve este input ou tag.
+            Por exemplo aqui nos iremos color o name color porque se trata de uma cor e eu quero apenas 
+            escolher uma, entao eu uso o mesmo nome!!-->
+    </label>
+    <br><br>
+    <button onclick="trocar()">Trocar</button>
+    <br><br>
+    <button onclick="exibir()">Exibir</button>
+    <br><br>
+    <button onclick="Change()">Change</button>
+    <br><br>
+    <button onclick="changeColor()">Change Color</button>
+    <p id="textoHtml">
+        <span style="display: none">Hakuna</span><strong>Matata</strong>
+        <span style="visibility: hidden;">Mundo</span>
+        <span>JS</span>
+    </p>
+    <script>
+        
+        /*get = Pegar
+        Element = Elemento(ou seja qual o tipo, Class ou ID entre outros)
+        By = Por
+        Id = Identificador Unico
+        
+        Quando eu uso o metodo getElementByID eu vou pegar a linha do 
+        ID e vou passar para o JavaScript*/
+        function mostrar() {
+            console.log(window.document.getElementById("recebe").value)
+            /*
+            O metodo "checked" retorna true, caso o input estiver marcado ou false caso desmarcado!
+            */
+        }
+
+        function trocar() {
+            console.log(document.getElementById("option1").checked)
+            if (window.document.getElementById("option1").checked == true) {
+                window.document.body.style.backgroundColor = "red"
+            } else if (window.document.getElementById("option2").checked == true) {
+                window.document.body.style.backgroundColor = "blue"
+            } else {
+                window.document.body.style.backgroundColor = "green"
+                console.log("Nenhuma opcao marcada!")
+            }
+        }
+
+        function exibir() {
+            console.log(window.document.body.style)
+            console.log(window.document.body)
+            console.log(window.document.head)
+        }
+
+        function Change() {
+            window.document.body.style = "background: red"
+
+            if (window.document.body.style = "background: red") {
+                window.document.body.style = "background: blue; text-align: center;"
+            }
+        }
+
+        function changeColor() {
+            window.document.body.style.backgroundColor = "purple"
+            /*Acessamos a Janela do Navegador na nossa pagina, em seguida o documento em que estamos trabalhando, (nao precisamos
+            colocar o html), em seguida body para entrar no corpo do nosso projeto, e style para entrar na propriedade
+            de estilo CSS atraves do JavaScript no nosso projeto e pegamos a propriedade backgroudColor e passando
+            um valor constante chamado "purple" para deixar o fundo da nossa tela roxo.*/
+        }
+
+        console.log("------ USANDO innerHTML ------");
+        console.log(document.getElementById("textoHtml").innerHTML);
+        /*
+        <span style="display: none">Hakuna</span><strong>Matata</strong>
+        <span style="visibility: hidden;">Mundo</span>
+        <span>JS</span>
+
+        Pega o texto com as filhas e formatacoes dentro dele.
+
+        O innerHTML pode ser usado para inserção de tags, textos e imagens em uma página web, gerando
+        um risco de segurança. Parecido com um cross-site scripting, mas inofensivo, pois o HTML5
+        especifica que uma tag <script> inserida via innerHTML em uma página web não deve ser executada.
+        Entretanto, existem formas de executar JavaScript sem usar <script>, portanto, ainda há um risco
+        de segurança ao utilizar o innerHTML. Por esta razão, recomenda-se não utilizar o innerHTML para
+        inserção de texto puro.
+        */
+
+        console.log("------ USANDO innerText ------");
+        console.log(document.getElementById("textoHtml").innerText);
+        /*
+        Já o innerText retorna apenas o texto do elemento. Ele ignora todas as tags HTML que estão dentro do elemento,
+        mas ainda assim, “entende” o css do elemento, retornando apenas textos visíveis. Utiliza-se quando
+        queremos buscar apenas o texto visível disponível no elemento.
+        */
+
+        console.log("------ USANDO textContent ------");
+        console.log(document.getElementById("textoHtml").textContent);
+
+        /*
+        O textContent funciona de forma muito semelhante ao innerText, porém, retornando todo o conteúdo
+        de texto, incluindo o texto oculto pelo css, bem como as quebras de linha (\n). Utilizamos o
+        textContent quando queremos buscar todo o texto disponível no elemento.
+        */
+    </script>
+</body>
+
+</html>

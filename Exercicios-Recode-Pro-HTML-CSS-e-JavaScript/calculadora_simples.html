@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Calculadora Basica</title>
+    </head>
+    <body>
+        <h1>Calculadora Basica</h1>
+        <script>
+            let option = prompt("Use ' + ' para SOMA | \
+Use ' - ' para SUBTRACAO| \
+Use ' * ' para MULTIPLICACAO | \
+Use ' / ' para DIVISAO");
+            let num1 = Number(prompt("Primeiro numero: "))
+            let num2 = Number(prompt("Segundo numero: "))
+            switch (option){
+                case "+":
+                    console.log(num1 + num2);
+                    break;
+                case '-':
+                    console.log(num1 - num2);
+                    break;
+                case '*':
+                    console.log(num1 * num2);
+                    break;
+                case '/':
+                    console.log(num1 / num2);
+                    break;
+                default:
+                    console.log("Opcao invalida");
+            }
+        </script>
+    </body>
+</html>
